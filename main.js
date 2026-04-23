@@ -107,12 +107,17 @@ async function loadEvents() {
     }
 
     const text = await response.text();
-    const events = parseEventsFile(text);
+    const allEvents = parseEventsFile(text);
     const now = new Date();
-    const nextEvent = events.find((event) => eventDateTime(event) >= now) || events[events.length - 1] || null;
+    
+    // Prochain événement (le premier dans le futur, ou le dernier si tout est passé)
+    const nextEvent = allEvents.find((event) => eventDateTime(event) >= now) || allEvents[allEvents.length - 1] || null;
+    
+    // Filtrer pour le calendrier annuel : seulement les dates futures
+    const futureEvents = allEvents.filter((event) => eventDateTime(event) >= now);
 
     renderHighlightedEvent(nextEvent);
-    renderEvents(events, nextEvent);
+    renderEvents(futureEvents, nextEvent);
   } catch (error) {
     renderHighlightedEvent(null);
     eventsList.innerHTML = "<p>Le calendrier n’a pas pu être chargé.</p>";
