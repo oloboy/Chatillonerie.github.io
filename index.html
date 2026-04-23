@@ -1,251 +1,237 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>La Châtillonnerie | Repair Café à Châtillon</title>
-    <meta
-      name="description"
-      content="La Châtillonnerie organise des Repair Cafés gratuits à Châtillon pour réparer, réemployer, apprendre ensemble et créer du lien entre habitants."
-    />
-    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <a class="brand" href="#top">
-        <img src="assets/logofullblack.svg" alt="Logo La Châtillonnerie" />
-      </a>
-      <nav class="site-nav" aria-label="Navigation principale">
-        <a href="#mission">Notre mission</a>
-        <a href="#fonctionnement">Repair Café</a>
-        <a href="#evenements">Événements</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
 
-    <main id="top">
-      <section class="hero section">
-        <div class="hero-copy">
-          <figure class="hero-logo" aria-label="Identité visuelle La Châtillonnerie">
-            <img src="assets/logofullblack.svg" alt="La Châtillonnerie" />
-          </figure>
-          <p class="eyebrow">Repair Café citoyen à Châtillon</p>
-          <h1>Réparer ensemble, prolonger la vie des objets, renforcer le lien local.</h1>
-          <p class="lead">
-            La Châtillonnerie est une association loi 1901 qui organise des ateliers de
-            réparation gratuits, coopératifs et ouverts à toutes et tous au Centre
-            Guynemer.
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Châtillonnerie | Repair Café à Châtillon</title>
+  <meta name="description"
+    content="La Châtillonnerie organise des Repair Cafés gratuits à Châtillon pour réparer, réemployer, apprendre ensemble et créer du lien entre habitants." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top">
+      <img src="assets/logofullblack.svg" alt="Logo La Châtillonnerie" />
+    </a>
+    <nav class="site-nav" aria-label="Navigation principale">
+      <a href="#mission">Notre mission</a>
+      <a href="#fonctionnement">Repair Café</a>
+      <a href="#evenements">Événements</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section">
+      <div class="hero-copy">
+        <figure class="hero-logo" aria-label="Identité visuelle La Châtillonnerie">
+          <img src="assets/logofullblack.svg" alt="La Châtillonnerie" />
+        </figure>
+        <p class="eyebrow">Repair Café citoyen à Châtillon</p>
+        <h1>Réparer ensemble, prolonger la vie des objets, renforcer le lien local.</h1>
+        <p class="lead">
+          La Châtillonnerie est une association loi 1901 qui organise des ateliers de
+          réparation gratuits, coopératifs et ouverts à toutes et tous au Centre
+          Guynemer.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#evenements">Voir les prochains rendez-vous</a>
+          <a class="button button-secondary" href="#contact">Nous contacter</a>
+        </div>
+        <ul class="hero-badges" aria-label="Points clés">
+          <li>Entrée libre et gratuite</li>
+          <li>Bénévoles réparateurs passionnés</li>
+          <li>Objets, textile, vélo, informatique</li>
+        </ul>
+      </div>
+      <div class="hero-panel">
+        <article class="next-event-card" aria-live="polite">
+          <p class="card-label">Prochain atelier</p>
+          <h2 id="next-event-title">Chargement…</h2>
+          <p id="next-event-date" class="event-date">Veuillez patienter</p>
+          <p id="next-event-location" class="event-location"></p>
+          <p id="next-event-notes" class="event-notes"></p>
+        </article>
+        <div class="hero-stats">
+          <article>
+            <strong>Gratuit</strong>
+            <span>pour tous les visiteurs</span>
+          </article>
+          <article>
+            <strong>Réemploi</strong>
+            <span>contre le gaspillage et l’obsolescence</span>
+          </article>
+          <article>
+            <strong>Convivial</strong>
+            <span>un temps d’entraide entre habitants</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="mission" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Notre mission</p>
+        <h2>Moins jeter. Plus réparer. Mieux vivre ensemble.</h2>
+      </div>
+      <div class="grid two-cols">
+        <article class="panel">
+          <p>
+            La Châtillonnerie agit pour diminuer l’empreinte écologique humaine et
+            combattre la sur-production. L’association organise des ateliers de
+            réparation, de réemploi, de sensibilisation à l’entretien et à
+            l’auto-diagnostic afin d’allonger la durée de vie des objets.
           </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#evenements">Voir les prochains rendez-vous</a>
-            <a class="button button-secondary" href="#contact">Nous contacter</a>
-          </div>
-          <ul class="hero-badges" aria-label="Points clés">
-            <li>Entrée libre et gratuite</li>
-            <li>Bénévoles réparateurs passionnés</li>
-            <li>Objets, textile, vélo, informatique</li>
+        </article>
+        <article class="panel accent">
+          <p>
+            Au-delà de la réparation, le projet défend l’entraide, la cohésion sociale
+            et le partage des savoir-faire entre habitants d’une même ville. On y
+            apprend ensemble, on s’entraide et on redonne de la valeur à ce qui
+            semblait bon à jeter.
+          </p>
+        </article>
+      </div>
+      <div class="pillars">
+        <article>
+          <h3>Écologie concrète</h3>
+          <p>Réduire les déchets, limiter les achats neufs et lutter contre l’obsolescence.</p>
+        </article>
+        <article>
+          <h3>Transmission</h3>
+          <p>Partager des gestes simples d’entretien, de diagnostic et de réparation.</p>
+        </article>
+        <article>
+          <h3>Lien de quartier</h3>
+          <p>Créer des rencontres utiles et chaleureuses entre bénévoles et habitants.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="fonctionnement" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Le principe du Repair Café</p>
+        <h2>Un atelier ouvert, coopératif et non payant.</h2>
+      </div>
+      <div class="grid two-cols">
+        <article class="panel">
+          <h3>Comment ça se passe ?</h3>
+          <ul class="list">
+            <li>Vous venez avec un objet en panne, cassé ou à vérifier.</li>
+            <li>Vous échangez avec un bénévole réparateur sur place.</li>
+            <li>Le diagnostic et la réparation se font ensemble autant que possible.</li>
+            <li>Une inscription sur place est prévue à partir de 14h, avec 1 objet par personne.</li>
           </ul>
-        </div>
-        <div class="hero-panel">
-          <article class="next-event-card" aria-live="polite">
-            <p class="card-label">Prochain atelier</p>
-            <h2 id="next-event-title">Chargement…</h2>
-            <p id="next-event-date" class="event-date">Veuillez patienter</p>
-            <p id="next-event-location" class="event-location"></p>
-            <p id="next-event-notes" class="event-notes"></p>
-          </article>
-          <div class="hero-stats">
-            <article>
-              <strong>Gratuit</strong>
-              <span>pour tous les visiteurs</span>
-            </article>
-            <article>
-              <strong>Réemploi</strong>
-              <span>contre le gaspillage et l’obsolescence</span>
-            </article>
-            <article>
-              <strong>Convivial</strong>
-              <span>un temps d’entraide entre habitants</span>
-            </article>
-          </div>
-        </div>
-      </section>
+        </article>
+        <article class="panel">
+          <h3>Que peut-on apporter ?</h3>
+          <ul class="list">
+            <li>Petit électroménager</li>
+            <li>Appareils électroniques, TV, PC</li>
+            <li>Vêtements et textile</li>
+            <li>Jouets, bijoux et petits objets du quotidien</li>
+            <li>Vélos et petites réparations associées</li>
+          </ul>
+        </article>
+      </div>
+      <div class="values-strip">
+        <span>Gratuit</span>
+        <span>Bénévole</span>
+        <span>Local</span>
+        <span>Réemploi</span>
+        <span>Convivial</span>
+        <span>Accessible</span>
+      </div>
+    </section>
 
-      <section class="section media-band" aria-label="Ambiance des ateliers">
-        <figure class="media-card tall">
-          <img
-            src="https://guynemer92.fr/wp-content/uploads/2024/12/repair.jpg"
-            alt="Atelier Repair Café avec des bénévoles et des objets à réparer"
-          />
-        </figure>
-        <figure class="media-card wide">
-          <img
-            src="https://guynemer92.fr/wp-content/uploads/2024/12/chatillonerie.jpg"
-            alt="Visuel La Châtillonnerie au Centre Guynemer"
-          />
-        </figure>
-      </section>
+    <section id="evenements" class="section spotlight">
+      <div class="section-heading">
+        <p class="eyebrow">Agenda</p>
+        <h2>Les prochains rendez-vous et le calendrier annuel.</h2>
+        <p class="section-intro">
+          La carte ci-dessous met toujours en avant la prochaine date à venir. Une fois
+          l’atelier passé, le site affiche automatiquement le suivant.
+        </p>
+      </div>
+      <div class="grid feature-layout">
+        <article class="panel featured-panel">
+          <p class="card-label">À ne pas manquer</p>
+          <h3 id="featured-event-title">Chargement…</h3>
+          <p id="featured-event-date" class="event-date"></p>
+          <p id="featured-event-location" class="event-location"></p>
+          <p id="featured-event-notes" class="event-notes"></p>
+        </article>
+        <article class="panel calendar-panel">
+          <h3>Calendrier annuel</h3>
+          <div id="events-list" class="events-list" aria-live="polite"></div>
+        </article>
+      </div>
+    </section>
 
-      <section id="mission" class="section">
-        <div class="section-heading">
-          <p class="eyebrow">Notre mission</p>
-          <h2>Moins jeter. Plus réparer. Mieux vivre ensemble.</h2>
-        </div>
-        <div class="grid two-cols">
-          <article class="panel">
-            <p>
-              La Châtillonnerie agit pour diminuer l’empreinte écologique humaine et
-              combattre la sur-production. L’association organise des ateliers de
-              réparation, de réemploi, de sensibilisation à l’entretien et à
-              l’auto-diagnostic afin d’allonger la durée de vie des objets.
-            </p>
-          </article>
-          <article class="panel accent">
-            <p>
-              Au-delà de la réparation, le projet défend l’entraide, la cohésion sociale
-              et le partage des savoir-faire entre habitants d’une même ville. On y
-              apprend ensemble, on s’entraide et on redonne de la valeur à ce qui
-              semblait bon à jeter.
-            </p>
-          </article>
-        </div>
-        <div class="pillars">
-          <article>
-            <h3>Écologie concrète</h3>
-            <p>Réduire les déchets, limiter les achats neufs et lutter contre l’obsolescence.</p>
-          </article>
-          <article>
-            <h3>Transmission</h3>
-            <p>Partager des gestes simples d’entretien, de diagnostic et de réparation.</p>
-          </article>
-          <article>
-            <h3>Lien de quartier</h3>
-            <p>Créer des rencontres utiles et chaleureuses entre bénévoles et habitants.</p>
-          </article>
-        </div>
-      </section>
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Pourquoi participer ?</p>
+        <h2>Parce qu’un objet réparé, c’est aussi une conversation, un geste transmis et un déchet évité.</h2>
+      </div>
+      <div class="grid three-cols">
+        <article class="panel">
+          <h3>Pour la planète</h3>
+          <p>Réparer avant de remplacer évite des déchets et économise des ressources.</p>
+        </article>
+        <article class="panel">
+          <h3>Pour apprendre</h3>
+          <p>Chaque atelier permet de mieux comprendre ses objets et d’adopter de bons réflexes.</p>
+        </article>
+        <article class="panel">
+          <h3>Pour la ville</h3>
+          <p>Les Repair Cafés renforcent l’entraide et rapprochent les habitants autour d’un objectif utile.</p>
+        </article>
+      </div>
+    </section>
 
-      <section id="fonctionnement" class="section">
-        <div class="section-heading">
-          <p class="eyebrow">Le principe du Repair Café</p>
-          <h2>Un atelier ouvert, coopératif et non payant.</h2>
-        </div>
-        <div class="grid two-cols">
-          <article class="panel">
-            <h3>Comment ça se passe ?</h3>
-            <ul class="list">
-              <li>Vous venez avec un objet en panne, cassé ou à vérifier.</li>
-              <li>Vous échangez avec un bénévole réparateur sur place.</li>
-              <li>Le diagnostic et la réparation se font ensemble autant que possible.</li>
-              <li>Une inscription sur place est prévue à partir de 14h, avec 1 objet par personne.</li>
-            </ul>
-          </article>
-          <article class="panel">
-            <h3>Que peut-on apporter ?</h3>
-            <ul class="list">
-              <li>Petit électroménager</li>
-              <li>Appareils électroniques, TV, PC</li>
-              <li>Vêtements et textile</li>
-              <li>Jouets, bijoux et petits objets du quotidien</li>
-              <li>Vélos et petites réparations associées</li>
-            </ul>
-          </article>
-        </div>
-        <div class="values-strip">
-          <span>Gratuit</span>
-          <span>Bénévole</span>
-          <span>Local</span>
-          <span>Réemploi</span>
-          <span>Convivial</span>
-          <span>Accessible</span>
-        </div>
-      </section>
-
-      <section id="evenements" class="section spotlight">
-        <div class="section-heading">
-          <p class="eyebrow">Agenda</p>
-          <h2>Les prochains rendez-vous et le calendrier annuel.</h2>
-          <p class="section-intro">
-            La carte ci-dessous met toujours en avant la prochaine date à venir. Une fois
-            l’atelier passé, le site affiche automatiquement le suivant.
+    <section id="contact" class="section contact-section">
+      <div class="section-heading">
+        <p class="eyebrow">Infos pratiques</p>
+        <h2>Nous trouver et nous contacter.</h2>
+      </div>
+      <div class="grid two-cols">
+        <article class="panel contact-card">
+          <h3>Lieu des ateliers</h3>
+          <p>Centre Guynemer<br />2 rue Guynemer<br />92320 Châtillon</p>
+          <p>Entrée libre et gratuite.</p>
+        </article>
+        <article class="panel contact-card accent">
+          <h3>Contact</h3>
+          <p>Téléphone : <a href="tel:+33650059033">06 50 05 90 33</a></p>
+          <p>
+            Email :
+            <a href="mailto:contact@chatillonnerie.fr">contact@chatillonnerie.fr</a>
           </p>
-        </div>
-        <div class="grid feature-layout">
-          <article class="panel featured-panel">
-            <p class="card-label">À ne pas manquer</p>
-            <h3 id="featured-event-title">Chargement…</h3>
-            <p id="featured-event-date" class="event-date"></p>
-            <p id="featured-event-location" class="event-location"></p>
-            <p id="featured-event-notes" class="event-notes"></p>
-          </article>
-          <article class="panel calendar-panel">
-            <h3>Calendrier annuel</h3>
-            <div id="events-list" class="events-list" aria-live="polite"></div>
-          </article>
-        </div>
-      </section>
+          <p>
+            Soutien :
+            <a href="https://www.helloasso.com/associations/la-chatillonnerie" target="_blank" rel="noreferrer">
+              page HelloAsso
+            </a>
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
 
-      <section class="section">
-        <div class="section-heading">
-          <p class="eyebrow">Pourquoi participer ?</p>
-          <h2>Parce qu’un objet réparé, c’est aussi une conversation, un geste transmis et un déchet évité.</h2>
-        </div>
-        <div class="grid three-cols">
-          <article class="panel">
-            <h3>Pour la planète</h3>
-            <p>Réparer avant de remplacer évite des déchets et économise des ressources.</p>
-          </article>
-          <article class="panel">
-            <h3>Pour apprendre</h3>
-            <p>Chaque atelier permet de mieux comprendre ses objets et d’adopter de bons réflexes.</p>
-          </article>
-          <article class="panel">
-            <h3>Pour la ville</h3>
-            <p>Les Repair Cafés renforcent l’entraide et rapprochent les habitants autour d’un objectif utile.</p>
-          </article>
-        </div>
-      </section>
+  <footer class="site-footer">
+    <p>La Châtillonnerie • Repair Café citoyen à Châtillon • site de démonstration pour GitHub Pages</p>
+  </footer>
 
-      <section id="contact" class="section contact-section">
-        <div class="section-heading">
-          <p class="eyebrow">Infos pratiques</p>
-          <h2>Nous trouver et nous contacter.</h2>
-        </div>
-        <div class="grid two-cols">
-          <article class="panel contact-card">
-            <h3>Lieu des ateliers</h3>
-            <p>Centre Guynemer<br />2 rue Guynemer<br />92320 Châtillon</p>
-            <p>Entrée libre et gratuite.</p>
-          </article>
-          <article class="panel contact-card accent">
-            <h3>Contact</h3>
-            <p>Téléphone : <a href="tel:+33650059033">06 50 05 90 33</a></p>
-            <p>
-              Email :
-              <a href="mailto:contact@chatillonnerie.fr">contact@chatillonnerie.fr</a>
-            </p>
-            <p>
-              Soutien :
-              <a href="https://www.helloasso.com/associations/la-chatillonnerie" target="_blank" rel="noreferrer">
-                page HelloAsso
-              </a>
-            </p>
-          </article>
-        </div>
-      </section>
-    </main>
+  <script src="main.js" defer></script>
+</body>
 
-    <footer class="site-footer">
-      <p>La Châtillonnerie • Repair Café citoyen à Châtillon • site de démonstration pour GitHub Pages</p>
-    </footer>
-
-    <script src="main.js" defer></script>
-  </body>
 </html>
