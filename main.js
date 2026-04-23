@@ -175,6 +175,45 @@ function initScrollReveal() {
 }
 
 // Set current year in footer
+// Modal Management
+function initLegalModal() {
+  const modal = document.getElementById("legal-modal");
+  const openBtn = document.getElementById("open-legal");
+  const closeBtn = document.getElementById("close-modal");
+
+  if (!modal || !openBtn || !closeBtn) return;
+
+  const openModal = (e) => {
+    e.preventDefault();
+    modal.classList.add("active");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden"; // Prevent scroll
+  };
+
+  const closeModal = () => {
+    modal.classList.remove("active");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = ""; // Restore scroll
+  };
+
+  openBtn.addEventListener("click", openModal);
+  closeBtn.addEventListener("click", closeModal);
+
+  // Close on outside click
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  // Close on ESC key
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal.classList.contains("active")) {
+      closeModal();
+    }
+  });
+}
+
 function setFooterYear() {
   const yearEl = document.getElementById("current-year");
   if (yearEl) {
@@ -187,4 +226,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initMobileMenu();
   initScrollReveal();
   setFooterYear();
+  initLegalModal();
 });

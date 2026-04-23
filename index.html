@@ -358,7 +358,7 @@
         <a class="brand footer-brand" href="#top">
           <img src="assets/logofullblack.svg" alt="Logo La Châtillonnerie" />
         </a>
-        <p>Repair Café citoyen à Châtillon. Réparons ensemble pour demain.</p>
+        <p>Repair Café citoyen à Châtillon. Réparons ensemble pour un meilleur demain.</p>
       </div>
       <div class="footer-col">
         <h4>Liens utiles</h4>
@@ -373,14 +373,36 @@
         <h4>L'Association</h4>
         <ul>
           <li><a href="mailto:contact@chatillonnerie.fr">Devenir bénévole</a></li>
-          <li><a href="#">Mentions légales</a></li>
+          <li><a href="#" id="open-legal">Mentions légales</a></li>
         </ul>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; <span id="current-year"></span> La Châtillonnerie. Site de démonstration pour GitHub Pages.</p>
+  <div id="legal-modal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close" id="close-modal" aria-label="Fermer">&times;</button>
+      <h2>Mentions légales</h2>
+      <div class="modal-body">
+        <h3>Éditeur du site</h3>
+        <p>Association La Châtillonnerie<br>
+          Association loi 1901<br>
+          Siège social : Châtillon, France<br>
+          Email : contact@chatillonnerie.fr</p>
+
+        <h3>Hébergement</h3>
+        <p>GitHub Pages<br>
+          GitHub Inc.<br>
+          88 Colin P. Kelly Jr St<br>
+          San Francisco, CA 94107, USA</p>
+
+        <h3>Propriété intellectuelle</h3>
+        <p>L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur et la
+          propriété intellectuelle. Tous i diritti di riproduzione sono riservati.</p>
+
+        <h3>Données personnelles</h3>
+        <p>Le site ne collecte aucune donnée personnelle à l'exception de celles envoyées volontairement par email.</p>
+      </div>
     </div>
-  </footer>
+  </div>
 
   <script src="main.js?v=2" defer></script>
 </body>
