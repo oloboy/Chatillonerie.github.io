@@ -587,15 +587,20 @@ h4 {
 
 .repair-grid {
   grid-template-columns: 1fr 1fr;
-  align-items: start;
+  align-items: stretch;
   gap: 3rem;
   margin-bottom: 3rem;
 }
 
 .repair-photo {
-  height: auto;
-  max-height: 520px;
-  width: 100%;
+  height: 100%;
+  min-height: 400px;
+}
+
+.repair-grid article.panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* Footer */
