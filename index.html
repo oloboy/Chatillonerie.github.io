@@ -21,16 +21,22 @@
     <a class="brand" href="#top">
       <img src="assets/logofullblack.svg" alt="Logo La Châtillonnerie" />
     </a>
-    <nav class="site-nav" aria-label="Navigation principale">
-      <a href="#mission">Notre mission</a>
-      <a href="#fonctionnement">Repair Café</a>
-      <a href="#evenements">Événements</a>
-      <a href="#contact">Contact</a>
+    
+    <button class="menu-toggle" id="mobile-menu-btn" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span class="hamburger"></span>
+    </button>
+
+    <nav class="site-nav" id="main-nav" aria-label="Navigation principale">
+      <a href="#mission" class="nav-link">Notre mission</a>
+      <a href="#fonctionnement" class="nav-link">Repair Café</a>
+      <a href="#evenements" class="nav-link">Événements</a>
+      <a href="#contact" class="nav-link">Contact</a>
+      <a href="https://www.helloasso.com/associations/la-chatillonnerie" target="_blank" rel="noreferrer" class="button button-donate">Faire un don</a>
     </nav>
   </header>
 
   <main id="top">
-    <section class="hero section">
+    <section class="hero section reveal">
       <div class="hero-copy">
         <figure class="hero-logo" aria-label="Identité visuelle La Châtillonnerie">
           <img src="assets/logofullblack.svg" alt="La Châtillonnerie" />
@@ -59,6 +65,7 @@
           <p id="next-event-date" class="event-date">Veuillez patienter</p>
           <p id="next-event-location" class="event-location"></p>
           <p id="next-event-notes" class="event-notes"></p>
+          <a href="https://maps.google.com/?q=Centre+Guynemer,+2+rue+Guynemer,+92320+Châtillon" target="_blank" rel="noreferrer" class="map-link">📍 Calculer l'itinéraire</a>
         </article>
         <div class="hero-stats">
           <article>
@@ -77,29 +84,47 @@
       </div>
     </section>
 
+    <section class="photo-gallery section reveal">
+      <div class="media-band">
+        <figure class="media-card">
+          <img src="assets/photo/chat (11).jpeg" alt="Vue d'ensemble d'un Repair Café" loading="lazy" />
+        </figure>
+        <figure class="media-card">
+          <img src="assets/photo/chat (4).jpeg" alt="Atelier couture et textile" loading="lazy" />
+        </figure>
+        <figure class="media-card">
+          <img src="assets/photo/chat (5).jpeg" alt="Réparation de vélos en extérieur" loading="lazy" />
+        </figure>
+      </div>
+    </section>
 
-    <section id="mission" class="section">
+    <section id="mission" class="section reveal">
       <div class="section-heading">
         <p class="eyebrow">Notre mission</p>
         <h2>Moins jeter. Plus réparer. Mieux vivre ensemble.</h2>
       </div>
-      <div class="grid two-cols">
-        <article class="panel">
-          <p>
-            La Châtillonnerie agit pour diminuer l’empreinte écologique humaine et
-            combattre la sur-production. L’association organise des ateliers de
-            réparation, de réemploi, de sensibilisation à l’entretien et à
-            l’auto-diagnostic afin d’allonger la durée de vie des objets.
-          </p>
-        </article>
-        <article class="panel accent">
-          <p>
-            Au-delà de la réparation, le projet défend l’entraide, la cohésion sociale
-            et le partage des savoir-faire entre habitants d’une même ville. On y
-            apprend ensemble, on s’entraide et on redonne de la valeur à ce qui
-            semblait bon à jeter.
-          </p>
-        </article>
+      <div class="grid two-cols mission-layout">
+        <div class="mission-text">
+          <article class="panel">
+            <p>
+              La Châtillonnerie agit pour diminuer l’empreinte écologique humaine et
+              combattre la sur-production. L’association organise des ateliers de
+              réparation, de réemploi, de sensibilisation à l’entretien et à
+              l’auto-diagnostic afin d’allonger la durée de vie des objets.
+            </p>
+          </article>
+          <article class="panel accent">
+            <p>
+              Au-delà de la réparation, le projet défend l’entraide, la cohésion sociale
+              et le partage des savoir-faire entre habitants d’une même ville. On y
+              apprend ensemble, on s’entraide et on redonne de la valeur à ce qui
+              semblait bon à jeter.
+            </p>
+          </article>
+        </div>
+        <figure class="media-card mission-photo">
+            <img src="assets/photo/chat (2).jpeg" alt="L'équipe et les participants en pleine activité informatique et réparation" loading="lazy" />
+        </figure>
       </div>
       <div class="pillars">
         <article>
@@ -117,12 +142,13 @@
       </div>
     </section>
 
-    <section id="fonctionnement" class="section">
+    <section id="fonctionnement" class="section reveal">
       <div class="section-heading">
         <p class="eyebrow">Le principe du Repair Café</p>
         <h2>Un atelier ouvert, coopératif et non payant.</h2>
       </div>
-      <div class="grid two-cols">
+      
+      <div class="grid two-cols repair-grid">
         <article class="panel">
           <h3>Comment ça se passe ?</h3>
           <ul class="list">
@@ -132,6 +158,15 @@
             <li>Une inscription sur place est prévue à partir de 14h, avec 1 objet par personne.</li>
           </ul>
         </article>
+        <figure class="media-card repair-photo">
+            <img src="assets/photo/chat (10).jpeg" alt="Diagnostic d'un appareil par les bénévoles" loading="lazy" />
+        </figure>
+      </div>
+
+      <div class="grid two-cols repair-grid reverse-mobile">
+        <figure class="media-card repair-photo">
+            <img src="assets/photo/chat (15).jpeg" alt="Réparation d'un fer à repasser" loading="lazy" />
+        </figure>
         <article class="panel">
           <h3>Que peut-on apporter ?</h3>
           <ul class="list">
@@ -143,6 +178,7 @@
           </ul>
         </article>
       </div>
+
       <div class="values-strip">
         <span>Gratuit</span>
         <span>Bénévole</span>
@@ -153,7 +189,7 @@
       </div>
     </section>
 
-    <section id="evenements" class="section spotlight">
+    <section id="evenements" class="section spotlight reveal">
       <div class="section-heading">
         <p class="eyebrow">Agenda</p>
         <h2>Les prochains rendez-vous et le calendrier annuel.</h2>
@@ -177,7 +213,7 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section reveal">
       <div class="section-heading">
         <p class="eyebrow">Pourquoi participer ?</p>
         <h2>Parce qu’un objet réparé, c’est aussi une conversation, un geste transmis et un déchet évité.</h2>
@@ -198,7 +234,7 @@
       </div>
     </section>
 
-    <section id="contact" class="section contact-section">
+    <section id="contact" class="section contact-section reveal">
       <div class="section-heading">
         <p class="eyebrow">Infos pratiques</p>
         <h2>Nous trouver et nous contacter.</h2>
@@ -208,6 +244,18 @@
           <h3>Lieu des ateliers</h3>
           <p>Centre Guynemer<br />2 rue Guynemer<br />92320 Châtillon</p>
           <p>Entrée libre et gratuite.</p>
+          <div class="map-container">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2627.5682613527267!2d2.2856441768822554!3d48.79963280418652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e670bb19c7f999%3A0xc3fec86db8227b68!2sCentre%20Guynemer!5e0!3m2!1sfr!2sfr!4v1713876000000!5m2!1sfr!2sfr" 
+              width="100%" 
+              height="250" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Carte Centre Guynemer">
+            </iframe>
+          </div>
         </article>
         <article class="panel contact-card accent">
           <h3>Contact</h3>
@@ -216,19 +264,46 @@
             Email :
             <a href="mailto:contact@chatillonnerie.fr">contact@chatillonnerie.fr</a>
           </p>
+          <br>
+          <h3>Soutenez-nous</h3>
           <p>
-            Soutien :
-            <a href="https://www.helloasso.com/associations/la-chatillonnerie" target="_blank" rel="noreferrer">
-              page HelloAsso
-            </a>
+            L'association vit grâce à vos dons et à l'engagement de ses bénévoles.
           </p>
+          <a href="https://www.helloasso.com/associations/la-chatillonnerie" target="_blank" rel="noreferrer" class="button button-primary" style="margin-top: 1rem;">
+            Faire un don sur HelloAsso
+          </a>
         </article>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>La Châtillonnerie • Repair Café citoyen à Châtillon • site de démonstration pour GitHub Pages</p>
+    <div class="footer-container">
+      <div class="footer-col">
+        <a class="brand footer-brand" href="#top">
+          <img src="assets/logofullblack.svg" alt="Logo La Châtillonnerie" />
+        </a>
+        <p>Repair Café citoyen à Châtillon. Réparons ensemble pour demain.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Liens utiles</h4>
+        <ul>
+          <li><a href="https://www.helloasso.com/associations/la-chatillonnerie" target="_blank" rel="noreferrer">Soutenir (HelloAsso)</a></li>
+          <li><a href="#evenements">Prochaines dates</a></li>
+          <li><a href="#contact">Nous contacter</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>L'Association</h4>
+        <ul>
+          <li><a href="mailto:contact@chatillonnerie.fr">Devenir bénévole</a></li>
+          <li><a href="#">Mentions légales</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="current-year"></span> La Châtillonnerie. Site de démonstration pour GitHub Pages.</p>
+    </div>
   </footer>
 
   <script src="main.js" defer></script>

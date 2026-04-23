@@ -125,4 +125,66 @@ async function loadEvents() {
   }
 }
 
-loadEvents();
+// Mobile Menu Toggle
+function initMobileMenu() {
+  const menuBtn = document.getElementById("mobile-menu-btn");
+  const mainNav = document.getElementById("main-nav");
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  if (!menuBtn || !mainNav) return;
+
+  function toggleMenu() {
+    const isExpanded = menuBtn.getAttribute("aria-expanded") === "true";
+    menuBtn.setAttribute("aria-expanded", !isExpanded);
+    mainNav.classList.toggle("open");
+  }
+
+  menuBtn.addEventListener("click", toggleMenu);
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      if (mainNav.classList.contains("open")) {
+        toggleMenu();
+      }
+    });
+  });
+}
+
+// Scroll Reveal Animation
+function initScrollReveal() {
+  const reveals = document.querySelectorAll(".reveal");
+
+  const observerOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.15
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+        observer.unobserve(entry.target); // Reveal only once
+      }
+    });
+  }, observerOptions);
+
+  reveals.forEach(reveal => {
+    observer.observe(reveal);
+  });
+}
+
+// Set current year in footer
+function setFooterYear() {
+  const yearEl = document.getElementById("current-year");
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  loadEvents();
+  initMobileMenu();
+  initScrollReveal();
+  setFooterYear();
+});
