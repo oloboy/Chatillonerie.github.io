@@ -421,6 +421,7 @@ h4 {
 .three-cols,
 .pillars {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 3rem;
 }
 
 .pillars article {
@@ -525,6 +526,7 @@ h4 {
 .mission-layout {
   grid-template-columns: 1.2fr 0.8fr;
   align-items: stretch;
+  gap: 2rem;
 }
 
 .mission-text {
