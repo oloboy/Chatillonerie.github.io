@@ -476,11 +476,20 @@ h4 {
   color: var(--ink);
 }
 
+#next-event-title,
 .event-date {
   font-weight: 800;
-  color: var(--accent);
-  font-size: 1.35rem;
+  font-size: 1.3rem;
   margin-bottom: 0.5rem;
+}
+
+#next-event-title {
+  color: var(--ink);
+  font-family: "Manrope", sans-serif; /* Per renderlo meno 'pesante' dell'H2 standard se necessario, o lasciamo Fraunces */
+}
+
+.event-date {
+  color: var(--accent);
 }
 
 .list li {
