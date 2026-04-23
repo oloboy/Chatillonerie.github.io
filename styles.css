@@ -20,7 +20,6 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {
@@ -32,7 +31,6 @@ body {
     radial-gradient(circle at 90% 10%, rgba(89, 112, 86, 0.2), transparent 24%),
     linear-gradient(180deg, #f7f2e8 0%, #f3ecdf 52%, #efe5d7 100%);
   line-height: 1.6;
-  overflow-x: hidden;
 }
 
 img {
@@ -474,10 +472,16 @@ h4 {
   background: rgba(202, 90, 46, 0.05);
 }
 
-.event-item time,
-.event-date {
+.event-item time {
   font-weight: 800;
   color: var(--ink);
+}
+
+.event-date {
+  font-weight: 800;
+  color: var(--accent);
+  font-size: 1.35rem;
+  margin-bottom: 0.5rem;
 }
 
 .list li {
