@@ -504,6 +504,44 @@ h4 {
   background: var(--accent);
 }
 
+.icon-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.icon-item {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.icon-item p {
+  margin: 0;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.4;
+}
+
+.icon-wrapper {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(202, 90, 46, 0.1);
+  color: var(--accent);
+  border-radius: 12px;
+  border: 1px solid rgba(202, 90, 46, 0.15);
+}
+
+.icon-wrapper svg {
+  width: 24px;
+  height: 24px;
+}
+
 .map-container {
   margin-top: 1.5rem;
   border-radius: 16px;
