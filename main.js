@@ -51,15 +51,15 @@ function renderHighlightedEvent(event) {
   const location = event ? event.location : "";
   const notes = event ? event.notes : "";
 
-  nextTitle.textContent = title;
-  nextDate.textContent = date;
-  nextLocation.textContent = location;
-  nextNotes.textContent = notes;
+  if (nextTitle) nextTitle.textContent = title;
+  if (nextDate) nextDate.textContent = date;
+  if (nextLocation) nextLocation.textContent = location;
+  if (nextNotes) nextNotes.textContent = notes;
 
-  featuredTitle.textContent = title;
-  featuredDate.textContent = date;
-  featuredLocation.textContent = location;
-  featuredNotes.textContent = notes;
+  if (featuredTitle) featuredTitle.textContent = title;
+  if (featuredDate) featuredDate.textContent = date;
+  if (featuredLocation) featuredLocation.textContent = location;
+  if (featuredNotes) featuredNotes.textContent = notes;
 }
 
 function renderEvents(events, nextEvent) {

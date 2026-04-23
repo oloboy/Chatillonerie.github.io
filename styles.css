@@ -320,7 +320,7 @@ h4 {
 .pillars,
 .hero-stats,
 .media-band,
-.feature-layout,
+.calendar-container,
 .three-cols {
   display: grid;
   gap: 1.5rem;
@@ -439,8 +439,9 @@ h4 {
   justify-content: center;
 }
 
-.feature-layout {
-  grid-template-columns: 1fr 1.2fr;
+.calendar-container {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .featured-panel {
@@ -623,8 +624,7 @@ h4 {
 /* Responsive */
 @media (max-width: 1024px) {
   .hero,
-  .mission-layout,
-  .feature-layout {
+  .mission-layout {
     grid-template-columns: 1fr;
   }
   
