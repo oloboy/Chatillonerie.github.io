@@ -587,13 +587,15 @@ h4 {
 
 .repair-grid {
   grid-template-columns: 1fr 1fr;
-  align-items: stretch;
-  margin-bottom: 1.5rem;
+  align-items: start;
+  gap: 3rem;
+  margin-bottom: 3rem;
 }
 
 .repair-photo {
-  height: 100%;
-  min-height: 250px;
+  height: auto;
+  max-height: 520px;
+  width: 100%;
 }
 
 /* Footer */
