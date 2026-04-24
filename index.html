@@ -13,6 +13,16 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap"
     rel="stylesheet" />
+  <meta name="theme-color" content="#1F2A22" />
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="La Châtillonnerie | Repair Café à Châtillon" />
+  <meta property="og:description" content="La Châtillonnerie organise des Repair Cafés gratuits à Châtillon pour réparer, réemployer, apprendre ensemble et créer du lien entre habitants." />
+  <meta property="og:image" content="https://www.chatillonnerie.fr/assets/photo/chat%20(11).jpeg" />
+  <meta property="og:url" content="https://www.chatillonnerie.fr/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+
   <link rel="stylesheet" href="styles.css?v=2" />
 </head>
 
@@ -58,10 +68,17 @@
       <div class="hero-panel">
         <article class="next-event-card" aria-live="polite">
           <p class="card-label">Prochain atelier</p>
-          <h2 id="next-event-title">Chargement…</h2>
-          <p id="next-event-date" class="event-date">Veuillez patienter</p>
-          <p id="next-event-location" class="event-location"></p>
-          <p id="next-event-notes" class="event-notes"></p>
+          <div id="next-event-skeleton" class="skeleton-wrapper">
+            <div class="skeleton skeleton-title"></div>
+            <div class="skeleton skeleton-text"></div>
+            <div class="skeleton skeleton-text short"></div>
+          </div>
+          <div id="next-event-content" style="display: none;">
+            <h2 id="next-event-title"></h2>
+            <p id="next-event-date" class="event-date"></p>
+            <p id="next-event-location" class="event-location"></p>
+            <p id="next-event-notes" class="event-notes"></p>
+          </div>
           <a href="https://maps.google.com/?q=Centre%20Guynemer,%202%20rue%20Guynemer,%2092320%20Châtillon" target="_blank"
             rel="noreferrer" class="map-link">📍 Calculer l'itinéraire</a>
         </article>
@@ -343,7 +360,7 @@
           <p>
             L'association vit grâce à vos dons et à l'engagement de ses bénévoles.
           </p>
-          <a href="https://www.helloasso.com/associations/la-chatillonnerie" target="_blank" rel="noreferrer"
+          <a href="https://www.helloasso.com/associations/la-chatillonnerie/formulaires/1" target="_blank" rel="noreferrer"
             class="button button-primary" style="margin-top: 1rem;">
             Faire un don sur HelloAsso
           </a>
@@ -377,6 +394,11 @@
         </ul>
       </div>
     </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="current-year"></span> La Châtillonnerie. Site de démonstration pour GitHub Pages.</p>
+    </div>
+  </footer>
+
   <div id="legal-modal" class="modal" aria-hidden="true">
     <div class="modal-content">
       <button class="modal-close" id="close-modal" aria-label="Fermer">&times;</button>
@@ -402,7 +424,9 @@
         <p>Le site ne collecte aucune donnée personnelle à l'exception de celles envoyées volontairement par email.</p>
       </div>
     </div>
-  </div>
+  </div>  <button id="back-to-top" class="back-to-top" aria-label="Retour en haut" title="Retour en haut">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+  </button>
 
   <script src="main.js?v=2" defer></script>
 </body>

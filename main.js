@@ -51,6 +51,14 @@ function renderHighlightedEvent(event) {
   const location = event ? event.location : "";
   const notes = event ? event.notes : "";
 
+  const skeleton = document.getElementById("next-event-skeleton");
+  const content = document.getElementById("next-event-content");
+
+  if (skeleton && content) {
+    skeleton.style.display = "none";
+    content.style.display = "block";
+  }
+
   if (nextTitle) nextTitle.textContent = title;
   if (nextDate) nextDate.textContent = date;
   if (nextLocation) nextLocation.textContent = location;
@@ -78,6 +86,11 @@ function renderEvents(events, nextEvent) {
 
     if (nextEvent && event.date === nextEvent.date && event.startTime === nextEvent.startTime) {
       item.classList.add("is-next");
+    }
+
+    const now = new Date();
+    if (eventDateTime(event) < now) {
+      item.classList.add("past-event");
     }
 
     const title = document.createElement("strong");
@@ -113,11 +126,9 @@ async function loadEvents() {
     // Prochain événement (le premier dans le futur, ou le dernier si tout est passé)
     const nextEvent = allEvents.find((event) => eventDateTime(event) >= now) || allEvents[allEvents.length - 1] || null;
     
-    // Filtrer pour le calendrier annuel : seulement les dates futures
-    const futureEvents = allEvents.filter((event) => eventDateTime(event) >= now);
-
+    // Afficher tous les événements (passés et futurs) avec un style différent pour les passés
     renderHighlightedEvent(nextEvent);
-    renderEvents(futureEvents, nextEvent);
+    renderEvents(allEvents, nextEvent);
   } catch (error) {
     renderHighlightedEvent(null);
     eventsList.innerHTML = "<p>Le calendrier n’a pas pu être chargé.</p>";
@@ -221,10 +232,32 @@ function setFooterYear() {
   }
 }
 
+// Back to Top Button
+function initBackToTop() {
+  const backToTopBtn = document.getElementById("back-to-top");
+  if (!backToTopBtn) return;
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      backToTopBtn.classList.add("visible");
+    } else {
+      backToTopBtn.classList.remove("visible");
+    }
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   loadEvents();
   initMobileMenu();
   initScrollReveal();
   setFooterYear();
   initLegalModal();
+  initBackToTop();
 });
