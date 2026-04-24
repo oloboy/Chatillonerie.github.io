@@ -88,11 +88,6 @@ function renderEvents(events, nextEvent) {
       item.classList.add("is-next");
     }
 
-    const now = new Date();
-    if (eventDateTime(event) < now) {
-      item.classList.add("past-event");
-    }
-
     const title = document.createElement("strong");
     title.textContent = event.title;
 
@@ -126,9 +121,11 @@ async function loadEvents() {
     // Prochain événement (le premier dans le futur, ou le dernier si tout est passé)
     const nextEvent = allEvents.find((event) => eventDateTime(event) >= now) || allEvents[allEvents.length - 1] || null;
     
-    // Afficher tous les événements (passés et futurs) avec un style différent pour les passés
+    // Filtrer pour il calendario annuale: solo le date future
+    const futureEvents = allEvents.filter((event) => eventDateTime(event) >= now);
+
     renderHighlightedEvent(nextEvent);
-    renderEvents(allEvents, nextEvent);
+    renderEvents(futureEvents, nextEvent);
   } catch (error) {
     renderHighlightedEvent(null);
     eventsList.innerHTML = "<p>Le calendrier n’a pas pu être chargé.</p>";
