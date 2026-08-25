@@ -1,48 +1,48 @@
 # Sources de contenu et d'assets
 
-Cette refonte a Ã©tÃ© prÃ©parÃ©e Ã  partir des sources publiques suivantes :
+Cette refonte a été préparée Ã  partir des sources publiques suivantes :
 
 ## Sources principales
 
-- Site historique indexÃ© : `https://www.chatillonnerie.fr/`
-  - slogan `#rÃ©parer #rÃ©utiliser #s'entraider`
+- Site historique indexé : `https://www.chatillonnerie.fr/`
+  - slogan `#réparer #réutiliser #s'entraider`
   - description de l'association
   - dates 2025-2026 des ateliers
-  - lieu, tÃ©lÃ©phone, email, liens de navigation
+  - lieu, téléphone, email, liens de navigation
 - HelloAsso : `https://www.helloasso.com/associations/la-chatillonnerie`
   - objet de l'association
-  - axe Ã©cologique, rÃ©emploi, entretien, autodiagnostic
-  - entraide et cohÃ©sion sociale au niveau local
-- Ville de ChÃ¢tillon : `https://www.ville-chatillon.fr/evenements/repaircafe-de-la-chatillonnerie/`
-  - Ã©quipe de bÃ©nÃ©voles
-  - exemples d'objets rÃ©parÃ©s
+  - axe écologique, réemploi, entretien, autodiagnostic
+  - entraide et cohésion sociale au niveau local
+- Ville de Châtillon : `https://www.ville-chatillon.fr/evenements/repaircafe-de-la-chatillonnerie/`
+  - équipe de bénévoles
+  - exemples d'objets réparés
 - Centre Guynemer : `https://guynemer92.fr/le-repaircafe/`
-  - ateliers coopÃ©ratifs et non payants
-  - principe du repair cafÃ©
-  - frÃ©quence habituelle : premier samedi du mois Ã  partir de 14h, hors vacances scolaires
-- Mentions lÃ©gales indexÃ©es : `https://www.chatillonnerie.fr/public/Accueil/Legal`
-  - siÃ¨ge social
+  - ateliers coopératifs et non payants
+  - principe du repair café
+  - fréquence habituelle : premier samedi du mois Ã  partir de 14h, hors vacances scolaires
+- Mentions légales indexées : `https://www.chatillonnerie.fr/public/Accueil/Legal`
+  - siège social
   - emails de contact historiques
 
-## Assets rÃ©cupÃ©rÃ©s
+## Assets récupérés
 
-Les logos SVG suivants ont Ã©tÃ© tÃ©lÃ©chargÃ©s depuis le site historique :
+Les logos SVG suivants ont été téléchargés depuis le site historique :
 
 - `assets/logofullblack.svg`
 - `assets/logofullwhite.svg`
 - `assets/favicon.svg`
 
-## Contenu rÃ©Ã©crit
+## Contenu réécrit
 
-Le texte de `index.html` n'est pas une copie brute du site historique. Il s'agit d'une rÃ©Ã©criture Ã©ditoriale en une seule page, structurÃ©e pour mobile, tablette et desktop, en conservant les informations essentielles :
+Le texte de `index.html` n'est pas une copie brute du site historique. Il s'agit d'une réécriture éditoriale en une seule page, structurée pour mobile, tablette et desktop, en conservant les informations essentielles :
 
 - mission de l'association ;
-- valeurs Ã©cologiques et sociales ;
-- gratuitÃ© et fonctionnement bÃ©nÃ©vole ;
-- typologie des rÃ©parations ;
-- coordonnÃ©es et liens utiles ;
+- valeurs écologiques et sociales ;
+- gratuité et fonctionnement bénévole ;
+- typologie des réparations ;
+- coordonnées et liens utiles ;
 - calendrier annuel.
 
-## Point Ã  vÃ©rifier avant mise en ligne
+## Point Ã  vérifier avant mise en ligne
 
-Les dates prÃ©sentes dans `data/events.json` proviennent du site indexÃ© tel qu'il Ã©tait visible publiquement au moment de la collecte. Il faut les revalider si le calendrier officiel a changÃ© depuis.
+Les dates présentes dans `data/events.json` proviennent du site indexé tel qu'il était visible publiquement au moment de la collecte. Il faut les revalider si le calendrier officiel a changé depuis.

@@ -39,14 +39,14 @@ function formatDate(event) {
   }).format(date);
 
   if (event.endTime) {
-    return `${datePart} â¢ ${event.startTime} â ${event.endTime}`;
+    return `${datePart} • ${event.startTime} – ${event.endTime}`;
   }
 
-  return `${datePart} â¢ ${event.startTime}`;
+  return `${datePart} • ${event.startTime}`;
 }
 
 function renderHighlightedEvent(event) {
-  const title = event ? event.title : "Aucune date publiÃ©e";
+  const title = event ? event.title : "Aucune date publiée";
   const date = event ? formatDate(event) : "Ajoutez une date dans le fichier data/events.txt";
   const location = event ? event.location : "";
   const notes = event ? event.notes : "";
@@ -75,7 +75,7 @@ function renderEvents(events, nextEvent) {
 
   if (!events.length) {
     const emptyState = document.createElement("p");
-    emptyState.textContent = "Aucun Ã©vÃ©nement nâest disponible pour le moment.";
+    emptyState.textContent = "Aucun événement n’est disponible pour le moment.";
     eventsList.appendChild(emptyState);
     return;
   }
@@ -118,7 +118,7 @@ async function loadEvents() {
     const allEvents = parseEventsFile(text);
     const now = new Date();
     
-    // Prochain Ã©vÃ©nement (le premier dans le futur, ou le dernier si tout est passÃ©)
+    // Prochain événement (le premier dans le futur, ou le dernier si tout est passé)
     const nextEvent = allEvents.find((event) => eventDateTime(event) >= now) || allEvents[allEvents.length - 1] || null;
     
     // Filtrer pour il calendario annuale: solo le date future
@@ -128,7 +128,7 @@ async function loadEvents() {
     renderEvents(futureEvents, nextEvent);
   } catch (error) {
     renderHighlightedEvent(null);
-    eventsList.innerHTML = "<p>Le calendrier nâa pas pu Ãªtre chargÃ©.</p>";
+    eventsList.innerHTML = "<p>Le calendrier n’a pas pu être chargé.</p>";
     console.error(error);
   }
 }
