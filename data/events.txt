@@ -1,13 +1,15 @@
 # Format:
 # YYYY-MM-DD|HH:MM|HH:MM|Lieu|Titre|Notes
 
-2025-10-04|14:00|17:00|Centre Guynemer, 2 rue Guynemer, 92320 Châtillon|Repair Café mensuel|Inscription sur place à 14h. 1 objet par personne.
-2025-11-08|14:00|17:00|Centre Guynemer, 2 rue Guynemer, 92320 Châtillon|Repair Café mensuel|Inscription sur place à 14h. 1 objet par personne.
-2025-12-06|14:00|17:00|Centre Guynemer, 2 rue Guynemer, 92320 Châtillon|Repair Café mensuel|Inscription sur place à 14h. 1 objet par personne.
-2026-01-10|14:00|17:00|Centre Guynemer, 2 rue Guynemer, 92320 Châtillon|Repair Café mensuel|Inscription sur place à 14h. 1 objet par personne.
-2026-02-07|14:00|17:00|Centre Guynemer, 2 rue Guynemer, 92320 Châtillon|Repair Café mensuel|Inscription sur place à 14h. 1 objet par personne.
-2026-03-07|14:00|17:00|Centre Guynemer, 2 rue Guynemer, 92320 Châtillon|Repair Café mensuel|Inscription sur place à 14h. 1 objet par personne.
-2026-04-04|14:00|17:00|Centre Guynemer, 2 rue Guynemer, 92320 Châtillon|Repair Café mensuel|Inscription sur place à 14h. 1 objet par personne.
-2026-05-09|14:00|17:00|Centre Guynemer, 2 rue Guynemer, 92320 Châtillon|Repair Café mensuel|Inscription sur place à 14h. 1 objet par personne.
-2026-06-06|14:00|17:00|Centre Guynemer, 2 rue Guynemer, 92320 Châtillon|Repair Café mensuel|Inscription sur place à 14h. 1 objet par personne.
-2026-07-04|14:00|17:00|Centre Guynemer, 2 rue Guynemer, 92320 Châtillon|Repair Café mensuel|Inscription sur place à 14h. 1 objet par personne.
+2026-09-05|10:00|18:00|Stade Municipal Guy Môquet, 35 avenue Clément Perrière, 92320 Châtillon|Repair Café au FORUM| 1 objet par personne.
+2026-10-10|14:00|17:00|Centre Guynemer, 2 rue Guynemer, 92320 Châtillon|Repair Café mensuel|Inscription sur place à 14h. 1 objet par personne.
+2026-11-07|14:00|17:00|Centre Guynemer, 2 rue Guynemer, 92320 Châtillon|Repair Café mensuel|Inscription sur place à 14h. 1 objet par personne.
+2026-12-05|14:00|17:00|Centre Guynemer, 2 rue Guynemer, 92320 Châtillon|Repair Café mensuel|Inscription sur place à 14h. 1 objet par personne.
+2027-01-09|14:00|17:00|Centre Guynemer, 2 rue Guynemer, 92320 Châtillon|Repair Café mensuel|Inscription sur place à 14h. 1 objet par personne.
+2027-02-06|14:00|17:00|Centre Guynemer, 2 rue Guynemer, 92320 Châtillon|Repair Café mensuel|Inscription sur place à 14h. 1 objet par personne.
+2027-03-06|14:00|17:00|Centre Guynemer, 2 rue Guynemer, 92320 Châtillon|Repair Café mensuel|Inscription sur place à 14h. 1 objet par personne.
+2027-04-24|14:00|17:00|Centre Guynemer, 2 rue Guynemer, 92320 Châtillon|Repair Café mensuel|Inscription sur place à 14h. 1 objet par personne.
+2027-05-08|14:00|17:00|Centre Guynemer, 2 rue Guynemer, 92320 Châtillon|Repair Café mensuel|Inscription sur place à 14h. 1 objet par personne.
+2027-06-05|14:00|17:00|Centre Guynemer, 2 rue Guynemer, 92320 Châtillon|Repair Café mensuel|Inscription sur place à 14h. 1 objet par personne.
+2027-07-26|14:00|17:00|Centre Guynemer, 2 rue Guynemer, 92320 Châtillon|Repair Café mensuel|Inscription sur place à 14h. 1 objet par personne.
+
