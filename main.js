@@ -4,6 +4,7 @@ const nextTitle = document.getElementById("next-event-title");
 const nextDate = document.getElementById("next-event-date");
 const nextLocation = document.getElementById("next-event-location");
 const nextNotes = document.getElementById("next-event-notes");
+const nextMapLink = document.getElementById("next-event-map-link") || document.querySelector(".next-event-card .map-link");
 
 const featuredTitle = document.getElementById("featured-event-title");
 const featuredDate = document.getElementById("featured-event-date");
@@ -63,6 +64,15 @@ function renderHighlightedEvent(event) {
   if (nextDate) nextDate.textContent = date;
   if (nextLocation) nextLocation.textContent = location;
   if (nextNotes) nextNotes.textContent = notes;
+
+  if (nextMapLink) {
+    if (event && event.location) {
+      nextMapLink.href = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(event.location)}`;
+      nextMapLink.style.display = "inline-flex";
+    } else {
+      nextMapLink.style.display = "none";
+    }
+  }
 
   if (featuredTitle) featuredTitle.textContent = title;
   if (featuredDate) featuredDate.textContent = date;
